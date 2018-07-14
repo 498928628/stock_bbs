@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"><link rel="shortcut icon" href="../../static/topic/index/static/images/notebook_ico.ico" type="image/x-icon" />
+    <title>复盘笔记本 - 每日数据</title>
+    <meta name="keywords" content="复盘笔记本,数据可视化，股市量化分析">
+    <meta name="description" content="复盘笔记本产品slogan">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/base.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/page.css">
+    <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
+
+
+</head>
+<body class="oneday">
+<div class="placeHeader"></div>
+<header>
+    <div class="logo"><img src="../../static/topic/index/static/images/notebook.png"><p>复盘笔记本</p><div class="clear"></div></div>
+<ul class="menu">
+    <li><a href="/topic">建仓or清仓?(大盘异动)</a></li>
+    <li class="curMenu"><a href="/topic1">换仓?(短期情绪)</a></li>
+    <li><a href="/topic2">辅助工具</a></li>
+  <li><a href="/topic/instruction1">使用说明</a></li>
+    </ul>
+<ul class="account">
+    <li><a href="/topic2/user">我的账户</a></li>
+ <li><a href="/">退出</a></li>
+</ul>
+<style>
+    .mb2{
+	text-align:center;
+}
+    .submit {
+	padding: 6px;
+	width:100px;
+}
+    .time{
+    float:right;
+    padding-right:20px;
+    }
+    .text1 {
+    padding: 3px;
+    border: 1px solid #cdcdcd;
+    width: 700px;
+}
+
+section.contain section.main div.dateSelect1{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	display:inline;
+	margin-right:22px;
+}
+
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    margin-left: 22px;
+}
+</style></header>
+<section class="contain">
+    <aside>
+        <ul>
+           <li class="menu1"><a href="/topic1">总结</a></li>
+         <li class="menu2"><a href="/topic1/admin1">复盘回顾</a></li>
+            <li class="menu3 curMenu"><a href="/topic1/weight1">潜伏日历</a></li>
+            <li class="menu4"><a href="/topic1/policy1">其他异动</a></li>
+            <li class="menu4"><a href="/topic1/height">市场及监管高度</a></li>
+        </ul>
+    </aside>
+    <section class="main" id="main">
+        <div class="dateSelect">
+            <span>潜伏日历(每日消息/微博等)</span>
+        </div>
+        <div class="dateSelect1">
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/1">01月</a></span>
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/2"> 02月</a></span>
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/3"> 03月</a></span>
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/4"> 04月</a></span>
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/5"> 05月</a></span>
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/6"> 06月</a></span>
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/7"> 07月</a></span>
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/8"> 08月</a></span>
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/9"> 09月</a></span>
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/10">10月</a></span>
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/11">11月</a></span>
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic1/weight1/12">12月</a></span>
+        </div>
+        <br>
+        <br>
+        <section class="content tab">
+            <div class="listThCover"><span></span></div>
+            <ul class="list">
+                <li class="th">
+                    <ul>
+                        <li class="td1"><span>板块标签</span></li>
+                        <li class="td2">&nbsp</li>
+                        <li class="td3"><a  class="sort" stype="sz">事件链接</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">事件简述</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">开始时间</a></li>
+                        <li class="td4"><a  class="sort down" stype="time"> 落地时间</a></li>
+                        <li class="td7">标的观察</li>
+                    </ul>
+                </li>
+            </ul>
+                <ul class="list" id="gpList">
+                {% for x in u %}
+                <li class="tr ops" aid="undefined">
+                    <ul><li class="td1">
+                        {{x.section}}
+                    </li>
+                        <li class="td2" style="color: #61a0ff;">
+                            <a  href="{{ url_for('topic1.delete', id=x.id, token=token) }}">
+                                删除
+                            </a>
+                        </li>
+                        <li class="td3">
+                            <a  href="{{x.link}} " target='_blank'>
+                                {% if x.link %}
+                                    网址
+                                {% else %}
+                                    &nbsp
+                                {% endif %}
+                            </a>
+                        </li>
+                        <li class="td4">
+                            {{x.level}}
+                        </li>
+                         <li class="td4">
+                            {{x.month}}月
+                        </li>
+                         <li class="td4">
+                            {{x.end_time}}
+                        </li>
+                        <li class="td7">
+                            {{x.stock}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+                </ul>
+
+        </section>
+        <section class="content tab">
+            <div class="listThCover"><span></span></div>
+            <ul class="list">
+                <li class="th">
+                    <ul>
+                        <li class="td1"><span>版块</span></li>
+                        <li class="td2">开始时间(年份)</li>
+                        <li class="td3"><a  class="sort" stype="sz">事件链接</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">事件简述</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">开始时间(月份)</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">落地时间</a></li>
+                        <li class="td7">标的观察</li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="form-horizontal" method="post" action="{{ url_for('.latent_calendar') }}">
+                <ul class="list" id="gpList">
+                <li class="tr ops" aid="undefined">
+                    <ul>
+                        <li class="td1">
+                        <input name="section" class="text" type="text" value="版块">
+                        </li>
+                        <li class="td2" style="color: #61a0ff;">
+                            <input name="year" class="text" type="number" value="2018">
+                        </li>
+                        <li class="td3">
+                            <input name="link" class="text" type="text" value="">
+                        </li>
+                        <li class="td4">
+                            <input name="level" class="text" type="text" value="简述">
+                        </li>
+                         <li class="td4">
+                            <input name="month" class="text" type="number" value="1">
+                        </li>
+                         <li class="td4">
+                            <input name="end_time" class="text" type="text" value="待定">
+                        </li>
+                        <li class="td7">
+                            <input name="stock" class="text1" type="text" value="股票简称">
+                        </li>
+                    </ul>
+                </li>
+                </ul>
+                <div class="mb2">
+                    <input type="submit" class="act-but submit" value="提交" id="btn_register">
+                </div>
+            </form>
+        </section>
+    </section>
+</section>
+
+<footer>
+    <div class="contain">
+        <p class="title">
+            <span class="item">关于我们</span>
+            <a href="/topic/instruction1">使用教程</a>
+            <span class="item">联系我们</span>
+            <a href="">联系方式</a>
+            <a href="">意见反馈</a>
+        </p>
+        <p class="copyright">Copyright ©2018  All Rights Reserved. 浙ICP备16009637号-3.</p>
+    </div>
+</footer>
+

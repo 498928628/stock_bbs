@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"><link rel="shortcut icon" href="../../static/topic/index/static/images/notebook_ico.ico" type="image/x-icon" />
+    <title>复盘笔记本 - 每日数据</title>
+    <meta name="keywords" content="复盘笔记本,数据可视化，股市量化分析">
+    <meta name="description" content="复盘笔记本产品slogan">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/base.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/page.css">
+       <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
+
+</head>
+<body class="oneday">
+<div class="placeHeader"></div>
+<header>
+    <div class="logo"><img src="../../static/topic/index/static/images/notebook.png"><p>复盘笔记本</p><div class="clear"></div></div>
+<ul class="menu">
+    <li class="curMenu"><a href="/topic">建仓or清仓?(大盘异动)</a></li>
+    <li ><a href="/topic1">换仓?(短期情绪)</a></li>
+    <li><a href="/topic2">辅助工具</a></li>
+  <li><a href="/topic/instruction1">使用说明</a></li>
+    </ul>
+<ul class="account">
+    <li><a href="/topic2/user">我的账户</a></li>
+ <li><a href="/">退出</a></li>
+</ul>
+<style>
+    .mb2{
+	text-align:center;
+}
+    .submit {
+	padding: 6px;
+	width:100px;
+}
+    .time{
+    float:right;
+    padding-right:20px;
+    }
+    .text1 {
+    padding: 3px;
+    border: 1px solid #cdcdcd;
+    width: 700px;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td11 {
+    width: 80%;
+    text-align: center;
+}
+    .butcent {
+    text-align:center;
+}
+
+
+
+</style></header>
+<section class="contain">
+    <aside>
+        <ul>
+           <li class="menu1 curMenu"><a href="/topic2">季报协同分析</a></li>
+            <li class="menu2" ><a href="/topic2/analyze">个人协同分析</a></li>
+     <li class="menu3"><a href="/topic2/supervision">季报协同监控</a></li>
+            <li class="menu4"><a href="/topic2/ranklist">龙虎榜自动关联</a></li>
+        </ul>
+    </aside>
+    <section class="main" id="main">
+        <div class="dateSelect">
+            <span>协同分析(快速30s)</span>
+        </div>
+        <section class="content tab">
+            <div class="listThCover"><span></span></div>
+            <ul class="list">
+                <li class="th">
+                     <ul>
+                        <li class="td1"><span>协同个股</span></li>
+                        <li class="td11">协同股东</li>
+                    </ul>
+                </li>
+            </ul>
+                <ul class="list" id="gpList">
+                {% for k,v in uu.items() %}
+                <li class="tr ops" aid="undefined">
+                    <ul><li class="td1">
+                            {{k}}
+                    </li>
+                        <li class="td11">
+                            {{v}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+                    <li class="tr ops" aid="undefined">
+                    <ul><li class="td1">
+                            汇总
+                    </li>
+                        <li class="td11">
+                            {% if ss %}
+                                    {{ss}}
+                                {% else %}
+                                 未查询到关联股东
+                                {% endif %}
+
+                        </li>
+                    </ul>
+                </li>
+                </ul>
+        </section>
+        <li class='butcent'>
+         <span><a class="btn btn-default  btn-lg active" role="button" href="/topic2/analyze" target="_blank">个人协同分析</a></span>
+        </li>
+    </section>
+</section>
+
+<footer>    <div class="contain">        <p class="title">            <span class="item">关于我们</span>            <a href="/topic/instruction1">使用教程</a>            <span class="item">联系我们</span>            <a href="">联系方式</a>            <a href="">意见反馈</a>        </p>        <p class="copyright">Copyright ©2018  All Rights Reserved. 浙ICP备16009637号-3.</p>    </div></footer>

@@ -1,0 +1,627 @@
+/************************************* 市场高度 *************************************/
+
+.trend section.contain section.main div.dateSelect div.kwordSearch div.times{
+	position: relative;
+}
+.trend section.contain section.main div.dateSelect div.kwordSearch div.times ul{
+	line-height: 30px;
+	padding-top: 8px;
+	position: absolute;
+	top: 0;
+	left: 97px;
+}
+.trend section.contain section.main div.dateSelect div.kwordSearch div.times ul li{
+	float: left;
+	width: 90px;
+}
+
+.trend section.contain section.main div.dateSelect div.kwordSearch div.times ul li input[type="checkbox"]{
+	vertical-align:middle;
+	margin-top:-2px;
+	margin-bottom:1px;
+}
+.trend section.contain section.main div.dateSelect div.kwordSearch select{
+	 height: 30px;
+	 line-height: 30px;
+	width: 170px;
+	background-color: #f9f9f9;
+	text-align: left;
+	padding-left: 5px;
+	margin-left: 30px;
+ }
+.trend section.contain section.main div.dateSelect div.kwordSearch div.times a.button{
+	display: block;
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	background-color: #00a1ff;
+	color: #ffffff;
+	text-align: center;
+	margin-left: 100px;
+	margin-top: 10px;
+}
+
+/************************************* 市场高度 *************************************/
+.high section.content div.contentBg{
+	position: relative;
+	width: 100%;
+	min-height: 480px;
+}
+.high section.content{
+}
+.high header div.logo{
+	position: relative;
+}
+.high header div.logo p{
+	font-size: 22px;
+	padding-left: 10px;
+	position: absolute;
+	top: 22px;
+	left: 55px;
+}
+.high section.content div.contentBg p.tip{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color: #888888;
+}
+
+/************************************* 关键词关联 *************************************/
+.krelation section.contain section.main div.dateSelect
+{
+	height: auto;
+}
+.krelation section.contain section.main div.dateSelect div.kwordSearch{
+	line-height:45px;
+	padding: 20px 0 20px 20px;
+	border-top: 1px solid #e4e4e4;
+	background-color: #f3f3f3;
+}
+.krelation section.contain section.main div.dateSelect div.kwordSearch div.tags{
+	line-height: 30px;
+	padding-top: 8px;
+}
+.krelation section.contain section.main div.dateSelect div.kwordSearch input[type="button"]{
+	background-color: #f3f3f3;
+	border: none;
+	padding: 0 8px;
+	color: #ebb800;
+	outline: none;
+}
+.krelation section.contain section.main div.dateSelect div.kwordSearch input[type="button"]:hover{
+	color: #0194e6;
+}
+.krelation section.contain section.main div.dateSelect div.kwordSearch input.button{
+	width: 70px;
+	background-color: #0194e6;
+	color: white;
+	height: 30px;
+	line-height: 30px;
+	margin-left: -4px;
+}
+.krelation section.contain section.main div.dateSelect div.kwordSearch input.button:hover{
+	color: #ffffff;
+}
+.krelation section.contain section.main div.dateSelect div.kwordSearch input[type="text"]{
+	/*text-align: center;*/
+	height: 22px;
+	line-height: 22px;
+	width: 240px;
+	background-color: #f9f9f9;
+}
+
+/************************************* 课程资料 *************************************/
+.course section.contain section.main div.dateSelect
+{
+	height: auto;
+}
+.course section.contain section.main div.dateSelect div.kwordSearch{
+	line-height:20px;
+	padding: 20px 0 20px 20px;
+	border-top: 1px solid #e4e4e4;
+	background-color: #f3f3f3;
+}
+.course section.contain section.main div.dateSelect div.kwordSearch input.button{
+	width: 80px;
+	background-color: #33a3fe;
+	color: white;
+	height: 30px;
+	line-height: 25px;
+	border: none;
+}
+.course section.contain section.main div.dateSelect div.kwordSearch input.button:hover{
+	background-color: #2196f6;
+}
+.course section.contain section.main div.dateSelect div.kwordSearch input[type="text"],
+.course section.contain section.main div.dateSelect div.kwordSearch select{
+	text-align: center;
+	height: 22px;
+	line-height: 23px;
+	width: 170px;
+	background-color: #f9f9f9;
+	text-align: left;
+	padding-left: 8px;
+}
+.course section.contain section.main div.dateSelect div.kwordSearch select{
+
+	height: 30px;
+	line-height: 30px;
+}
+.course section.contain section.main div.dateSelect div.kwordSearch ul li{
+	float: left;
+	width: 200px;
+	height: 75px;
+}
+.course section.contain section.main div.dateSelect div.kwordSearch ul li.btnItem{
+	width: 80px;
+}
+.course section.contain section.main div.dateSelect div.kwordSearch ul li p{
+	min-width: 50px;
+	min-height: 20px;
+	margin: 8px 0;
+}
+
+/************************************* 每日数据 *************************************/
+.oneday section.contain section.main section.content ul.list li.th{
+	overflow-y: scroll;
+}
+.oneday section.contain section.main section.content div.listThCover{
+	position: relative;
+}
+.oneday section.contain section.main section.content div.listThCover span{
+	display: inline-block;
+	width: 20px;
+	height: 45px;
+	background-color: #cde1ff;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td1{
+	width: 12%;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td1 span{
+	padding-left: 30px;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td2{
+	width: 12%;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td3{
+	width: 10%;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td4{
+	width: 10%;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td5{
+	width: 6%;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td6{
+	width: 14%;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td7{
+	width: 30%;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td8{
+	width: 6%;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td7 a{
+	display: inline-block;
+	padding: 0 5px;
+	background-color: #dfebfc;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 13px;
+	color: #61a0ff;
+	margin-right: 3px;
+}
+ul#gpList{
+	max-height: 320px;
+	overflow-y: scroll;
+}
+.oneday section.contain section.main section.tab{
+	/*margin-top: 55px;*/
+}
+.oneday section.contain section.main section.content div.tabBox{
+	width: 100%;
+	height: 35px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	background-color: #efefef;
+}
+.oneday section.contain section.main section.content div.tabBox div.lrButton{
+	position: absolute;
+	top: -35px;
+	right: 0;
+	background-color: #e4e4e4;
+	z-index: 1;
+}
+.oneday section.contain section.main section.content div.tabBox div.lrButton a{
+	display: inline-block;
+	width: 20px;
+	height: 33px;
+	border: 1px solid #dddddd;
+}
+.oneday section.contain section.main section.content div.tabBox div.lrButton a.upButton{
+	background: #ffffff url(../images/lr_button.png) no-repeat center 10px;
+}
+.oneday section.contain section.main section.content div.tabBox div.lrButton a.upNoMore{
+	background: #efefef url(../images/lr_button.png) no-repeat center -23px;
+}
+.oneday section.contain section.main section.content div.tabBox div.lrButton a.downButton{
+	background: #ffffff url(../images/lr_button.png) no-repeat center -58px
+}
+.oneday section.contain section.main section.content div.tabBox div.lrButton a.downNoMore{
+	background: #efefef url(../images/lr_button.png) no-repeat center -92px;
+}
+.oneday section.contain section.main section.content div.tabBox ul{
+	height: auto;
+	line-height: 35px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.oneday section.contain section.main section.content div.tabBox ul li{
+	float: left;
+	height: 33px;
+	padding: 0 25px;
+	background-color: #fff;
+	border: 1px solid #dddddd;
+	border-left: none;
+	color: #666;
+	font-size: 14px;
+	cursor: pointer;
+}
+.oneday section.contain section.main section.content div.tabBox ul li:last-child{
+	border-right: 1px solid #dddddd;
+}
+.oneday section.contain section.main section.content div.tabBox ul li.curtab{
+	background-color: #fddb00;
+}
+
+/************************************* 文章 *************************************/
+
+
+.article section.contain section.main section.content ul.list li ul li.td1{
+	width: 15%;
+}
+.article section.contain section.main section.content ul.list li ul li.td1 span{
+	padding-left: 30px;
+}
+.article section.contain section.main section.content ul.list li ul li.td2{
+	width: 50%;
+}
+.article section.contain section.main section.content ul.list li ul li.td3{
+	width: 35%;
+}
+
+/************************************* 关键词 *************************************/
+
+.keyWord section.main section.content div.box{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.keyWord section.main section.content div.box div.chart_rks{
+	width:65%;
+	min-width: 400px;
+	height:500px;
+	padding-top: 30px;
+}
+.keyWord section.main section.content div.box div.kstocks{
+	width: 30%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #f3f3f3;
+}
+.keyWord section.main section.content div.box div.kstocks p.title{
+	padding-left: 20px;
+	font-size: 16px;
+	color: #0194e6;
+}
+.keyWord section.contain section.main section.content ul.list>li{
+	line-height: 30px;
+	height: 30px;
+}
+.keyWord section.contain section.main section.content ul.list li.th{
+	height: 40px;
+	line-height: 40px;
+}
+.keyWord section.contain section.main section.content ul.list li ul li.td1{
+	width: 28%;
+}
+.keyWord section.contain section.main section.content ul.list li ul li.td1 span{
+	padding-left: 20px;
+}
+.keyWord section.contain section.main section.content ul.list li ul li.td2{
+	width: 42%;
+}
+.keyWord section.contain section.main section.content ul.list li ul li.td3{
+	width: 30%;
+}
+.keyWord section.contain section.main section.content ul.lists{
+	height: 450px;
+	overflow-y: scroll;
+}
+.keyWord section.contain section.main section.content ul.lists>li:nth-child(1){
+	padding-top: 10px;
+}
+.keyWord div.bottomspace{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	bottom: -30px;
+	right: 0;
+	background-color: #f3f3f3;
+}
+
+/************************************* 我的账户 *************************************/
+
+.account section.contain section.main section.content div.info{
+	padding: 20px;
+}
+.account section.contain section.main section.content p.title{
+	border-left: 4px solid #fddb00;
+	padding: 1px 10px;
+	font-size: 16px;
+}
+.account section.contain section.main section.content div.info a.button{
+	display: inline-block;
+	width: 60px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 13px;
+	text-align: center;
+	color: #e4c600;
+	border: 1px solid #fddb00;
+}
+.account section.contain section.main section.content p.title a.button{
+	float: right;
+	margin-top: -5px;
+}
+.account section.contain section.main section.content div.info ul li.accountInfo>a.button{
+	margin-left: 45px;
+	border: none;
+	color: #27c1ff;
+}
+.account section.contain section.main section.content ul{
+	padding-bottom: 30px;
+}
+.account section.contain section.main section.content ul li{
+	height: 55px;
+	line-height: 55px;
+	padding-left: 15px;
+	border-bottom: 1px solid #f0f0f0;
+	font-size: 14px;
+}
+.account section.contain section.main section.content ul li span.name{
+	color: #333;
+	display: inline-block;
+	width: 120px;
+}
+.account section.contain section.main section.content div.info ul li a.button{
+	margin-left: 0;
+	margin-right: 15px;
+}
+.account section.contain section.main section.content div.info ul li a.save{
+	background-color: #00a1ff;
+	color: #fff;
+	border: none;
+}
+.account section.contain section.main section.content div.info ul li a.cancel{
+	background-color: #fff;
+	color: #333;
+	border: 1px solid #cdcdcd;
+}
+.account section.contain section.main section.content div.info ul li input[type="text"]{
+	line-height: 22px;
+	width: 230px;
+}
+.account section.contain section.main section.content div.edit ul li span.dinfo{
+	display: inline;
+}
+/*只读状态*/
+.account section.contain section.main section.content div.read p.title a.button{
+	display: inline-block;
+}
+.account section.contain section.main section.content div.read ul li.last{
+	display: none;
+}
+.account section.contain section.main section.content div.read ul li input[type="text"]{
+	display: none;
+}
+/*编辑状态*/
+.account section.contain section.main section.content div.edit p.title a.button{
+	display: none;
+}
+.account section.contain section.main section.content div.edit ul li input[type="text"]{
+	display: inline-block;
+}
+.account section.contain section.main section.content div.edit ul li span.dinfo{
+	display: none;
+}
+.account section.contain section.main section.content div.edit ul li.last{
+	display: block;
+	background-color: #f6f6f6;
+}
+.account section.contain section.main section.content ul li.accountInfo{
+	height: auto;
+	min-height: 55px;
+}
+.account section.contain section.main section.content li.accountInfo div.changePwd{
+	padding-left: 120px;
+	background-color: #f3f3f3;
+	padding-top: 10px;
+	height: 314px;
+	display: none;
+}
+.account section.contain section.main section.content li.accountInfo div.changePwd p.tip{
+	margin: 0;
+	line-height: 30px;
+	color: #888888;
+	padding-top: 5px;
+}
+.account section.contain section.main section.content li.accountInfo div.changePwd div{
+	line-height: 40px;
+	padding-top: 10px;
+}
+.account section.contain section.main section.content li.accountInfo div.changePwd div p{
+	margin: 0;
+	line-height: 18px;
+	color: #888888;
+}
+.account section.contain section.main section.content li.accountInfo div.changePwd input{
+	line-height: 22px;
+	width: 230px;
+}
+.account section.contain section.main section.content li.accountInfo div.changePwd div.opers{
+	padding: 10px 0 15px 0;
+}
+.account section.contain section.main section.content div.info ul li.accountInfo>a#toBindPhone{
+	width: 90px;
+	margin-left: 26px;
+}
+.account section.contain section.main section.content div.info ul li.accountInfo span.valIcon{
+	color: #339900;
+	height: 25px;
+	padding: 3px 40px 5px 25px;
+	margin-left: 10px;
+	background: url(../images/icon_bindPhone.png) no-repeat 0 center;
+	font-size: 12px;
+	line-height: 12px;
+	display: none;
+}
+
+#bindPhoneBox div.BGbox div.contentBox{
+	width: 450px;
+	margin-top: -130px;
+	margin-left: -225px;
+}
+#bindPhoneBox div.bottom{
+	margin-top: 50px;
+}
+
+#bindPhoneBox div.bottom a.next{
+	background-color: #09c64a;
+	color: #fff;
+}
+#bindPhoneBox div.nextBox{
+	display: none;
+}
+
+#bindPhoneBox div.content p{
+	margin-top: 16px;
+}
+#bindPhoneBox div.nextBox div.title p{
+	height: 25px;
+	color: #FFFFFF;
+}
+#bindPhoneBox div.nextBox div.title a.back{
+	display: block;
+	width: 180px;
+	line-height: 30px;
+	height: 30px;
+	position: absolute;
+	top: -2px;
+	left: 20px;
+	background: url(../images/btn_back.png) no-repeat left center;
+	padding-left: 17px;
+	color: #888888;
+}
+#bindPhoneBox div.nextBox div.content p span{
+	color: #09c64a;
+}
+
+/************************************* 课程详细 *************************************/
+
+.detail section.main section.content{
+	min-height: 500px;
+}
+.detail section.main section.content p.title{
+	text-align: center;
+	font-size: 24px;
+	padding: 40px 0 0;
+	margin: 0;
+}
+.detail section.main section.content div.more{
+	text-align: center;
+	padding-top: 40px;
+}
+.detail section.main section.content div.more span.gray{
+	color: #888888;
+}
+.detail section.main section.content div.more span:not(.gray){
+	padding-right: 30px;
+}
+.detail section.main section.content div.content{
+	padding: 30px 50px 0;
+	line-height: 25px;
+	letter-spacing: 0.08em;
+}
+
+/************************************* 权限不足 *************************************/
+.nopermission section.main section.content{
+	min-height: 500px;
+}
+.nopermission section.main section.content div.bg{
+	padding: 30px;
+	position: relative;
+}
+.nopermission section.main section.content div.bg div.tips{
+	width: 100%;
+	border: 1px solid #ffeba7;
+	background-color: floralwhite;
+	padding-bottom: 5px;
+	margin-bottom: 30px;
+}
+.nopermission section.main section.content div.bg p.title{
+	line-height: 19px;
+	background: url(../images/warn.png) no-repeat 32px 0;
+	padding-left: 55px;
+	font-size: 16px;
+}
+.nopermission section.main section.content div.bg p.stitle{
+	padding-left: 55px;
+	color: #ff4900;
+}
+.nopermission section.main section.content div.way{
+	width: 240px;
+	height: 350px;
+	border: 1px solid #eee;
+	background-color: #f9f9f9;
+	text-align: center;
+	padding: 15px 5px 25px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+
+}
+.nopermission section.main section.content div.way3{
+	margin-right: 0;
+}
+.nopermission section.main section.content div.way img{
+	width: 200px;
+}
+.nopermission section.main section.content div.way p{
+	line-height: 25px;
+	text-align: left;
+	width: 185px;
+	margin: 0 auto;
+}
+.nopermission section.main section.content div.way span.orange{
+	color: #1fb574;
+	padding-right: 5px;
+	font-weight:bold;
+	display: block;
+	padding-bottom: 10px;
+}
+.nopermission section.main section.content div.way p.waytitle{
+	color: #686868;
+	padding-bottom: 15px;
+	line-height: 20px;
+}

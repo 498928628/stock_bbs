@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>复盘笔记本 - 注册</title>
+    <link rel="stylesheet" href="../static/register/css/base.css">
+    <!--必要样式-->
+    <link rel="stylesheet" type="text/css" href="../static/register/login/css/component.css">
+    <!--[if IE]>
+    <script src="/static/login/js/html5.js"></script>
+    <![endif]-->
+    <style>
+    body.register .large-header {
+    background-image:url({{photo}});
+    }
+    body.register .large-header .logo_box{
+	border-radius:61.80px;
+	margin-top: -300px;
+    }
+    body.register .large-header{
+	height: 100%;
+    }
+    body.register .large-header .logo_box h5{
+	color: #333;
+	font-weight: 700;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+    </style>
+</head>
+<body class="register">
+<div id="large-header" class="large-header">
+    <div class="logo_box">
+        <h4>账户注册</h4>
+        <form class="form-horizontal" method="post" action="{{ url_for('.post_register') }}">
+            <div class="input_outer">
+                <span class="icon u_user"></span>
+                <input name="username" class="text" type="text" placeholder="账户名称：3-30位字符">
+            </div>
+            <div class="input_outer">
+                <span class="icon u_pwd"></span>
+                <input name="password" class="text"  type="password" placeholder="设置密码：6-30位字符">
+            </div>
+        <h5>{{error}}</h5>
+            <div class="mb2">
+                <input type="submit" class="act-but submit" value="注册" id="btn_register">
+            </div>
+        </form>
+        <div class="register">
+            <i class="ic-back"></i><a href="/" >直接登录</a>
+        </div>
+    </div>
+</div>
+</body></html>

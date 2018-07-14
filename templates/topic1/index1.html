@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"><link rel="shortcut icon" href="../../static/topic/index/static/images/notebook_ico.ico" type="image/x-icon" />
+    <title>复盘笔记本 - 每日数据</title>
+    <meta name="keywords" content="复盘笔记本,数据可视化，股市量化分析">
+    <meta name="description" content="复盘笔记本产品slogan">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/base.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/page.css">
+       <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body class="oneday">
+<div class="placeHeader"></div>
+<header>
+    <div class="logo"><img src="../../static/topic/index/static/images/notebook.png"><p>复盘笔记本</p><div class="clear"></div></div>
+<ul class="menu">
+    <li ><a href="/topic">建仓or清仓?(大盘异动)</a></li>
+    <li class="curMenu"><a href="/topic1">换仓?(短期情绪)</a></li>
+    <li><a href="/topic2">辅助工具</a></li>
+  <li><a href="/topic/instruction1">使用说明</a></li>
+    </ul>
+<ul class="account">
+    <li><a href="/topic2/user">我的账户</a></li>
+ <li><a href="/">退出</a></li>
+</ul>
+<style>
+    .mb2{
+	text-align:center;
+}
+    .submit {
+	padding: 6px;
+	width:100px;
+}
+    .time{
+    float:right;
+    padding-right:20px;
+    }
+
+</style></header>
+<section class="contain">
+    <aside>
+        <ul>
+            <li class="menu1 curMenu"><a href="/topic1">总结</a></li>
+          <li class="menu2"><a href="/topic1/admin1">复盘回顾</a></li>
+            <li class="menu3"><a href="/topic1/weight1">潜伏日历</a></li>
+            <li class="menu4"><a href="/topic1/policy1">其他异动</a></li>
+            <li class="menu4"><a href="/topic1/height">市场及监管高度</a></li>
+        </ul>
+    </aside>
+     <section class="main" id="main">
+        <div class="dateSelect">
+            <span>市场及监管高度</span>
+        </div>
+        <section class="content tab">
+            <div class="listThCover"><span></span></div>
+            <ul class="list">
+                <li class="th">
+                     <ul>
+                        <li class="td1"><span>幅度</span></li>
+                        <li class="td2">&nbsp</li>
+                        <li class="td3"><a  class="sort" stype="sz">股票</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">主线板块</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">消息类型</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">游资标的</a></li>
+                        <li class="td7">权重标的/及其位置/其他</li>
+                    </ul>
+                </li>
+            </ul>
+                <ul class="list" id="gpList">
+                {% for x in g %}
+                <li class="tr ops" aid="undefined">
+                    <ul><li class="td1">
+                            {{x.rose}}
+                    </li>
+                        <li class="td2" style="color: #61a0ff;">
+                         &nbsp
+                        </li>
+                        <li class="td3">
+                            {{x.stock}}
+                        </li>
+                        <li class="td4">
+                            {{x.section}}
+                        </li>
+                         <li class="td4">
+                            {{x.status}}
+                        </li>
+                         <li class="td4">
+                            {{x.stock2}}
+                        </li>
+                        <li class="td7">
+                            {{x.policy}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+                </ul>
+
+        </section>
+    </section>
+    <section class="main" id="main">
+        <div class="dateSelect">
+            <span>潜伏日历(近两月)</span>
+        </div>
+        <section class="content tab">
+            <div class="listThCover"><span></span></div>
+            <ul class="list">
+                <li class="th">
+                    <ul>
+                        <li class="td1"><span>板块标签</span></li>
+                        <li class="td2">&nbsp</li>
+                        <li class="td3"><a  class="sort" stype="sz">事件链接</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">事件级别</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">开始时间</a></li>
+                        <li class="td4"><a  class="sort down" stype="time"> 落地时间</a></li>
+                        <li class="td7">标的观察</li>
+                    </ul>
+                </li>
+            </ul>
+                <ul class="list" id="gpList">
+                {% for x in s %}
+                <li class="tr ops" aid="undefined">
+                    <ul><li class="td1">
+                        {{x.section}}
+                    </li>
+                        <li class="td2" style="color: #61a0ff;">
+                            &nbsp
+                        </li>
+                        <li class="td3">
+                            <a  href="{{x.link}} " target='_blank'>
+                                {% if x.link %}
+                                    网址
+                                {% else %}
+                                    &nbsp
+                                {% endif %}
+                            </a>
+                        </li>
+                        <li class="td4">
+                            {{x.level}}
+                        </li>
+                         <li class="td4">
+                            {{x.month}}月
+                        </li>
+                         <li class="td4">
+                            {{x.end_time}}
+                        </li>
+                        <li class="td7">
+                            {{x.stock}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+                </ul>
+
+        </section>
+       </section>
+    <section class="main" id="main">
+        <div class="dateSelect">
+            <span>200亿权重异动/卖方研究/每日消息</span>
+        </div>
+        <section class="content tab">
+            <div class="listThCover"><span></span></div>
+            <ul class="list">
+                <li class="th">
+                     <ul>
+                        <li class="td1"><span>版块/个股</span></li>
+                        <li class="td2">&nbsp</li>
+                        <li class="td3"><a  class="sort" stype="sz">异动类型</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">链接</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">权重标的</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">游资标的</a></li>
+                        <li class="td7">消息/其他标的</li>
+                    </ul>
+                </li>
+            </ul>
+                <ul class="list" id="gpList">
+                {% for x in p %}
+                <li class="tr ops" aid="undefined">
+                    <ul><li class="td1">
+                            {{x.section}}
+                    </li>
+                        <li class="td2" style="color: #61a0ff;">
+                            &nbsp
+                        </li>
+                        <li class="td3">
+                            {{x.unusual_action}}
+                        </li>
+                        <li class="td4">
+                            <a  href="{{x.link}} " target='_blank'>
+                                {% if x.link %}
+                                    网址
+                                {% else %}
+                                    &nbsp
+                                {% endif %}
+                            </a>
+                        </li>
+                         <li class="td4">
+                            {{x.stock1}}
+                        </li>
+                         <li class="td4">
+                            {{x.stock2}}
+                        </li>
+                        <li class="td7">
+                            {{x.policy}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+                </ul>
+
+        </section>
+    </section>
+</section>
+<footer>    <div class="contain">        <p class="title">            <span class="item">关于我们</span>            <a href="/topic/instruction1">使用教程</a>            <span class="item">联系我们</span>            <a href="">联系方式</a>            <a href="">意见反馈</a>        </p>        <p class="copyright">Copyright ©2018  All Rights Reserved. 浙ICP备16009637号-3.</p>    </div></footer>
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"><link rel="shortcut icon" href="../../static/topic/index/static/images/notebook_ico.ico" type="image/x-icon" />
+    <title>复盘笔记本 - 每日数据</title>
+    <meta name="keywords" content="复盘笔记本,数据可视化，股市量化分析">
+    <meta name="description" content="复盘笔记本产品slogan">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/base.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/page.css">
+       <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
+</head>
+<body class="oneday">
+<div class="placeHeader"></div>
+<header>
+    <div class="logo"><img src="../../static/topic/index/static/images/notebook.png"><p>复盘笔记本</p><div class="clear"></div></div>
+<ul class="menu">
+    <li ><a href="/topic">建仓or清仓?(大盘异动)</a></li>
+    <li class="curMenu"><a href="/topic1">换仓?(短期情绪)</a></li>
+    <li><a href="/topic2">辅助工具</a></li>
+  <li><a href="/topic/instruction1">使用说明</a></li>
+    </ul>
+<ul class="account">
+    <li><a href="/topic2/user">我的账户</a></li>
+ <li><a href="/">退出</a></li>
+</ul>
+<style>
+    .mb2{
+	text-align:center;
+}
+    .submit {
+	padding: 6px;
+	width:100px;
+}
+    .time{
+    float:right;
+    padding-right:20px;
+    }
+    .text1 {
+    padding: 3px;
+    border: 1px solid #cdcdcd;
+    width: 700px;
+}
+
+</style></header>
+<section class="contain">
+    <aside>
+        <ul>
+              <li class="menu1"><a href="/topic1">总结</a></li>
+          <li class="menu2"><a href="/topic1/admin1">复盘回顾</a></li>
+            <li class="menu3"><a href="/topic1/weight1">潜伏日历</a></li>
+            <li class="menu4 curMenu"><a href="/topic1/policy1">其他异动</a></li>
+            <li class="menu4"><a href="/topic1/height">市场及监管高度</a></li>
+        </ul>
+    </aside>
+    <section class="main" id="main">
+        <div class="dateSelect">
+            <span>
+                <a href="http://www.iwencai.com/stockpick/search?ts=1&f=1&qs=stockhome_topbar_click&w=%E8%87%AA%E7%94%B1%E6%B5%81%E9%80%9A%E5%B8%82%E5%80%BC%E5%A4%A7%E4%BA%8E200%E4%BA%BF" target="_blank">200亿权重异动</a>/
+                <a href="http://data.eastmoney.com/report/hyyb.html" target="_blank">卖方研究</a>/
+                <a href="https://www.xuangubao.cn/" target="_blank">每日消息</a>/
+                微博等
+            </span>
+        </div>
+        <section class="content tab">
+            <div class="listThCover"><span></span></div>
+            <ul class="list">
+                <li class="th">
+                     <ul>
+                        <li class="td1"><span>版块/个股</span></li>
+                        <li class="td2">&nbsp</li>
+                        <li class="td3"><a  class="sort" stype="sz">异动类型</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">链接</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">权重标的</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">游资标的</a></li>
+                        <li class="td7">消息/其他标的</li>
+                    </ul>
+                </li>
+            </ul>
+                <ul class="list" id="gpList">
+                {% for x in u %}
+                <li class="tr ops" aid="undefined">
+                    <ul><li class="td1">
+                            {{x.section}}
+                    </li>
+                        <li class="td2" style="color: #61a0ff;">
+                            <a  href="{{ url_for('topic1.delete1', id=x.id, token=token) }}">
+                                删除
+                            </a>
+                        </li>
+                        <li class="td3">
+                            {{x.unusual_action}}
+                        </li>
+                        <li class="td4">
+                            <a  href="{{x.link}} " target='_blank'>
+                                {% if x.link %}
+                                    网址
+                                {% else %}
+                                    &nbsp
+                                {% endif %}
+                            </a>
+                        </li>
+                         <li class="td4">
+                            {{x.stock1}}
+                        </li>
+                         <li class="td4">
+                            {{x.stock2}}
+                        </li>
+                        <li class="td7">
+                            {{x.policy}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+                </ul>
+
+        </section>
+        <section class="content tab">
+            <div class="listThCover"><span></span></div>
+            <ul class="list">
+                <li class="th">
+                    <ul>
+                        <li class="td1"><span>版块/个股</span></li>
+                        <li class="td2">&nbsp</li>
+                        <li class="td3"><a  class="sort" stype="sz">异动类型</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">链接</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">权重标的</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">游资标的</a></li>
+                        <li class="td7">消息/其他标的</li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="form-horizontal" method="post" action="{{ url_for('.policy_index1') }}">
+                <ul class="list" id="gpList">
+                <li class="tr ops" aid="undefined">
+                    <ul>
+                        <li class="td1">
+                        <input name="section" class="text" type="text" value="影响版块/总结">
+                        </li>
+                        <li class="td2" style="color: #61a0ff;">
+                         <input name="weight_name" class="text" type="text" value="" disabled>
+                        </li>
+                        <li class="td3">
+                            <input name="unusual_action" class="text" type="text" value="异动类型">
+                        </li>
+                        <li class="td4">
+                            <input name="link" class="text" type="text" value="">
+                        </li>
+                         <li class="td4">
+                            <input name="stock1" class="text" type="text" value="权重标的">
+                        </li>
+                         <li class="td4">
+                            <input name="stock2" class="text" type="text" value="游资标的">
+                        </li>
+                        <li class="td7">
+                            <input name="policy" class="text1" type="text" value="其他">
+                        </li>
+                    </ul>
+                </li>
+                </ul>
+                <div class="mb2">
+                    <input type="submit" class="act-but submit" value="提交" id="btn_register">
+                </div>
+            </form>
+        </section>
+    </section>
+</section>
+
+<footer>    <div class="contain">        <p class="title">            <span class="item">关于我们</span>            <a href="/topic/instruction1">使用教程</a>            <span class="item">联系我们</span>            <a href="">联系方式</a>            <a href="">意见反馈</a>        </p>        <p class="copyright">Copyright ©2018  All Rights Reserved. 浙ICP备16009637号-3.</p>    </div></footer>
+<script type="text/javascript">

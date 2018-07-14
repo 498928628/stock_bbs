@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"><link rel="shortcut icon" href="../../static/topic/index/static/images/notebook_ico.ico" type="image/x-icon" />
+    <title>复盘笔记本 - 每日数据</title>
+    <meta name="keywords" content="复盘笔记本,数据可视化，股市量化分析">
+    <meta name="description" content="复盘笔记本产品slogan">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/base.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/page.css">
+    <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
+
+
+</head>
+<body class="oneday">
+<div class="placeHeader"></div>
+<header>
+    <div class="logo"><img src="../../static/topic/index/static/images/notebook.png"><p>复盘笔记本</p><div class="clear"></div></div>
+<ul class="menu">
+    <li><a href="/topic">建仓or清仓?(大盘异动)</a></li>
+    <li ><a href="/topic1">换仓?(短期情绪)</a></li>
+    <li class="curMenu"><a href="/topic2">辅助工具</a></li>
+  <li><a href="/topic/instruction1">使用说明</a></li>
+    </ul>
+<ul class="account">
+    <li><a href="/topic2/user">我的账户</a></li>
+ <li><a href="/">退出</a></li>
+</ul>
+<style>
+    .mb2{
+	text-align:center;
+}
+    .submit {
+	padding: 6px;
+	width:100px;
+}
+    .time{
+    float:right;
+    padding-right:20px;
+    }
+    .text1 {
+    padding: 3px;
+    border: 1px solid #cdcdcd;
+    width: 700px;
+}
+
+section.contain section.main div.dateSelect1{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	display:inline;
+	margin-right:22px;
+}
+
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    margin-left: 22px;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td11 {
+    width: 75%;
+    text-align: center;
+    overflow:auto;
+    text-overflow: clip;
+}
+.oneday section.contain section.main section.content ul.list li ul li.td1 {
+    width: 12%;
+    text-align: center;
+    overflow: auto;
+    text-overflow: clip;
+}
+ul.list>li {
+    width: 100%;
+    height: 60px;
+    line-height: 40px;
+    text-align: center;
+}
+</style></header>
+<section class="contain">
+    <aside>
+        <ul>
+         <li class="menu1 "><a href="/topic2">季报协同分析</a></li>
+            <li class="menu2" ><a href="/topic2/analyze">个人协同分析</a></li>
+            <li class="menu3 curMenu"><a href="/topic2/supervision">季报协同监控</a></li>
+            <li class="menu4"><a href="/topic2/ranklist">龙虎榜自动关联</a></li>
+        </ul>
+    </aside>
+    <section class="main" id="main">
+        <div class="dateSelect">
+            <!--<a 2018年3月31日到2018年6月30日 涨幅大于50% 上市天数大于200天>-->
+            <span>
+                <a href="http://www.iwencai.com/stockpick/search?typed=1&preParams=&ts=1&f=1&qs=result_rewrite&selfsectsn=&querytype=stock&searchfilter=&tid=stockpick&w=2018%E5%B9%B43%E6%9C%8831%E6%97%A5%E5%88%B02018%E5%B9%B46%E6%9C%8830%E6%97%A5%20%E6%B6%A8%E5%B9%85%E5%A4%A7%E4%BA%8E50%25%20%E4%B8%8A%E5%B8%82%E5%A4%A9%E6%95%B0%E5%A4%A7%E4%BA%8E200%E5%A4%A9&queryarea=" target="_blank">季度Top涨幅</a>:
+   <a href="http://data.eastmoney.com/gdfx/" target="_blank">股东监控</a>
+</span>
+        </div>
+        <div class="dateSelect1">
+              {% for x in s %}
+            <span><a class="btn btn-default  btn-lg active" role="button" href="/topic2/supervision/{{x}}">{{x}}</a></span>
+               {% endfor %}
+        </div>
+        <br>
+        <br>
+        <section class="content tab">
+            <div class="listThCover"><span></span></div>
+            <ul class="list">
+                <li class="th">
+                    <ul>
+                        <li class="td1"><span>姓名</span></li>
+                        <li class="td2">&nbsp</li>
+                        <li class="td3"><a  class="sort" stype="sz">跟踪价值</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">代表作</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">代表作时间</a></li>
+                        <li class="td4"><a  class="sort down" stype="time"> 组</a></li>
+                        <li class="td7">备注</li>
+                    </ul>
+                </li>
+            </ul>
+                <ul class="list" id="gpList">
+                {% for x in u %}
+                <li class="tr ops" aid="undefined">
+                    <ul><li class="td1">
+                         <a href="
+http://www.yidiancangwei.com/searchResult.php?ID=1&Val={{x.name}}
+" target="_blank">{{x.name}}</a>
+                    </li>
+                        <li class="td2" style="color: #61a0ff;">
+                            <a  href="{{ url_for('topic2.delete', id=x.id, token=token) }}">
+                                删除
+                            </a>
+                        </li>
+                        <li class="td3">
+                            {{x.rank}}
+                        </li>
+                        <li class="td4">
+                            {{x.stock}}
+                        </li>
+                         <li class="td4">
+                            {{x.period}}
+                        </li>
+                         <li class="td4">
+                            {{x.group}}
+                        </li>
+                        <li class="td7">
+                            {{x.tips}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+                </ul>
+
+        </section>
+            <section class="content tab">
+            <div class="listThCover"><span></span></div>
+            <ul class="list">
+                <li class="th">
+                    <ul>
+                         <li class="td1"><span>姓名</span></li>
+                        <li class="td2">&nbsp</li>
+                        <li class="td3"><a  class="sort" stype="sz">跟踪价值</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">代表作</a></li>
+                        <li class="td4"><a  class="sort down" stype="time">代表作时间</a></li>
+                        <li class="td4"><a  class="sort down" stype="time"> 组</a></li>
+                        <li class="td7">备注</li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="form-horizontal" method="post" action="{{ url_for('.supervision_register') }}">
+                <ul class="list" id="gpList">
+                <li class="tr ops" aid="undefined">
+                    <ul>
+                        <li class="td1">
+                        <input name="name" class="text" type="text" value="姓名">
+                        </li>
+                        <li class="td2" style="color: #61a0ff;">
+                         <input name="" class="text" type="text" value="" disabled>
+                        </li>
+                        <li class="td3">
+                            <input name="rank" class="text" type="text" value="30%">
+                        </li>
+                        <li class="td4">
+                            <input name="stock" class="text" type="text" value="上证50">
+                        </li>
+                         <li class="td4">
+                            <input name="period" class="text" type="text" value="时间段">
+                        </li>
+                         <li class="td4">
+                            <input name="group" class="text" type="text" value="组">
+                        </li>
+                        <li class="td7">
+                            <input name="tips" class="text1" type="text" value="备注">
+                        </li>
+                    </ul>
+                </li>
+                </ul>
+                <div class="mb2">
+                    <input type="submit" class="act-but submit" value="提交" id="btn_register">
+                </div>
+            </form>
+        </section>
+    </section>
+</section>
+
+<footer>    <div class="contain">        <p class="title">            <span class="item">关于我们</span>            <a href="/topic/instruction1">使用教程</a>            <span class="item">联系我们</span>            <a href="">联系方式</a>            <a href="">意见反馈</a>        </p>        <p class="copyright">Copyright ©2018  All Rights Reserved. 浙ICP备16009637号-3.</p>    </div></footer>
+

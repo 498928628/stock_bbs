@@ -1,0 +1,499 @@
+
+html{
+	height: 100%;
+}
+body,html{
+	margin:0;
+	padding:0;
+	background-color: #e4e4e4;
+	font-size: 13px;
+	line-height:13px;
+	width: 100%;
+	min-width: 960px;
+}
+body{
+	position: relative;
+	height: auto;
+	min-height: 100%;
+}
+a {
+	text-decoration: none;
+	color: #06acff;
+	cursor: pointer;
+}
+input,textarea,select{
+	padding: 3px;
+	border: 1px solid #cdcdcd;
+}
+ul,li{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
+.clear{
+	clear:both;
+	margin:0;
+	padding:0;
+	line-height:0;
+	font-size:0;
+}
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}
+div.placeHeader,header{
+	width: 100%;
+	height: 60px;
+
+	min-width: 960px;
+}
+header{
+	background-color:#0046ae;
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: #ffffff;
+	z-index: 4;
+}
+
+header div.logo,aside{
+	width: 170px;
+}
+div.placeAside{
+	display: none;
+}
+header div.logo{
+	padding-left: 15px;
+}
+header div.logo img,header div.logo p{
+	float: left;
+}
+header div.logo img{
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin-top: 5px;
+}
+header div.logo p{
+	font-size: 22px;
+}
+header ul.menu{
+	position:absolute;
+	left: 218px;
+	top: 0;
+	font-size: 15px;
+	line-height:60px;
+}
+header ul.menu li{
+	float: left;
+	padding-right: 20px;
+}
+header ul.menu li a{
+	color: #ffffff;
+}
+header ul.menu li.curMenu a{
+	color:#ecdb53;
+}
+header ul.account{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 150px;
+	line-height: 60px;
+}
+header ul.account li{
+	float:left;
+	text-align:center;
+	border-left: 1px solid #5673ba;
+	font-size: 14px;
+	padding: 0 15px;
+}
+header ul.account li a{
+	color: #ffffff;
+}
+
+section.contain{
+	height: 100%;
+}
+section.contain aside{
+	background-color: #262930;
+	padding-top: 90px;
+	font-size: 15px;
+	height: 100%;
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 3;
+}
+aside ul li{
+	width: 100%;
+	height:50px;
+	line-height:50px;
+}
+aside ul li.menu1{
+	background: url(../images/menu1.png) no-repeat 25px center;
+}
+aside ul li.menu2{
+	background: url(../images/menu2.png) no-repeat 25px center;
+}
+aside ul li.menu3{
+	background: url(../images/menu3.png) no-repeat 25px center;
+}
+aside ul li.menu4{
+	background: url(../images/menu4.png) no-repeat 25px center;
+}
+aside ul li.menu5{
+	background: url(../images/menu5.png) no-repeat 25px center;
+}
+aside ul li.menu6{
+	background: url(../images/menu6.png) no-repeat 25px center;
+}
+aside ul li.menu7{
+	background: url(../images/menu7.png) no-repeat 25px center;
+}
+aside ul li.menu8{
+	background: url(../images/menu8.png) no-repeat 25px center;
+}
+aside ul li.menu9{
+	background: url(../images/menu9.png) no-repeat 25px center;
+}
+aside ul li.menu10{
+	background: url(../images/menu10.png) no-repeat 25px center;
+}
+aside ul li.menu11{
+	background: url(../images/menu11.png) no-repeat 25px center;
+}
+aside ul li.menu12{
+	background: url(../images/menu12.png) no-repeat 25px center;
+}
+aside ul li.curMenu{
+	background-color:#003b94;
+}
+aside ul li a{
+	display: block;
+	padding-left: 60px;
+	color: #ffffff;
+}
+section.contain section.main{
+	padding: 30px 30px 100px 30px;
+	margin-left: 170px;
+}
+section.contain section.main div.dateSelect{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	margin-bottom: 20px;
+	background-color: #fff;
+}
+section.contain section.main div.dateSelect span{
+	margin-left: 20px;
+	font-size: 22px;
+}
+section.contain section.main div.dateSelect div.dslt{
+	float:right;
+	position:relative;
+}
+section.contain section.main div.dateSelect div.dslt input{
+	padding-left: 10px;
+	width: 240px;
+	height: 24px;
+	line-height: 24px;
+	position:absolute;
+	top: 15px;
+	right: 100px;
+}
+section.contain section.main div.dateSelect div.dslt a{
+	display: inline-block;
+	position:absolute;
+	top: 15px;
+	right: 20px;
+	width: 80px;
+	height: 32px;
+	line-height: 30px;
+	background-color: #fddb00;
+	text-align: center;
+	color: #000;
+}
+section.contain section.main div.dateSelect div.dslt a:hover{
+	background-color: #fdc400;
+}
+
+section.main section.content{
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding-bottom: 30px;
+}
+section.main section.content div.nodataBox{
+	position: relative;
+}
+section.main section.content div.nodata{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #ffffff url("../images/chart_nodata.png") no-repeat center center;
+	z-index: 1;
+}
+section.main section.content div.loadingBox{
+	position: relative;
+}
+section.main section.content div.loadingBox div.loading{
+	width: 77px;
+	height: 40px;
+	line-height: 40px;
+	padding: 15px 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+	border: 1px solid #dedede;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	border-radius: 4px;
+	color: #686868;
+	padding-left: 58px;
+	z-index: 2;
+	background: #ffffff url(../images/loading.gif) no-repeat 15px center;
+}
+
+footer{
+	width: 100%;
+	height: 70px;
+	background-color: #cdcdcd;
+	position: absolute;
+	left:0;
+	bottom: 0;
+	padding-top: 30px;
+	text-align: center;
+}
+footer p{
+	padding:0 0 15px 0;
+	margin:0;
+	color: #808080;
+}
+footer p.title span.item{
+	color: #333;
+	padding-left: 55px;
+	padding-right: 10px;
+}
+footer p.title a{
+	color: gray;
+	padding: 0 8px 0 5px;
+}
+footer div.contain{
+	width: 800px;
+	margin: 0 auto;
+	padding-left: 170px;
+}
+footer p.copyright{
+	padding-top: 5px;
+}
+/*列表样式*/
+ul.list>li{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+ul.list li.th{
+	background-color: #cde1ff;
+	height: 45px;
+	line-height: 45px;
+	color: #686868;
+}
+ul.list li.th ul li a.sort{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: #686868;
+}
+ul.list li.th ul li a.sort span{
+	display: inline-block;
+	width: 13px;
+	height: 11px;
+	background: url("../images/sort_normal.png") no-repeat 4px bottom;
+}
+ul.list li.th ul li a.up span{
+	background: url("../images/sort_up.png") no-repeat 4px bottom;
+}
+ul.list li.th ul li a.down span{
+	background: url("../images/sort_down.png") no-repeat 4px bottom;
+}
+ul.list>li:nth-child(2){
+	/*padding-top: 5px;*/
+}
+ul.list>li.ops{
+	background-color: #efefef;
+}
+ul.list>li.tr:hover{
+	background-color: #d9e8ff;
+}
+ul.list li ul li{
+	float: left;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+ul.list li ul li.td1{
+	width: 10%;
+}
+ul.list li ul li.td1 span{
+	padding-left: 30px;
+}
+ul.list li ul li.td2{
+	width: 20%;
+}
+ul.list li ul li.td3{
+	width: 40%;
+}
+ul.list li ul li.td4{
+	width: 15%;
+}
+ul.list li ul li.td5{
+	width: 15%;
+}
+ul.list li.nodata{
+	text-align: center;
+	line-height: 70px;
+	height: 70px;
+}
+ul.list li.nodata:hover{
+	background-color: #FFFFFF;
+}
+
+/*弹窗*/
+div.alertBox{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	display: none;
+}
+div.alertBox div.BGbox{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.2);
+	position: relative;
+}
+div.alertBox div.BGbox div.contentBox{
+	width: 400px;
+	min-height: 200px;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;
+	border-radius: 4px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+div.alertBox div.title{
+	position: relative;
+	padding-left: 20px;
+	line-height: 25px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 30px;
+	color: #888;
+	font-size: 14px;
+}
+div.alertBox div.title a.close{
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: -1px;
+	right: 10px;
+	background: url(../images/btn_close.png) no-repeat center center;
+}
+
+div.alertBox div.content{
+	padding: 0 20px;
+}
+
+div.alertBox div.content p{
+	font-size: 16px;
+	color: #888888;
+	margin-bottom: 25px;
+	line-height: 25px;
+	margin-top: 40px;
+	text-align: center;
+}
+div.alertBox div.content input{
+	padding-left: 10px;
+	height: 30px;
+	width: 400px;
+	font-size: 18px;
+}
+div.alertBox div.bottom{
+	width: 100%;
+	height: 55px;
+	background-color: #efefef;
+	margin-top: 50px;
+	line-height: 55px;
+	text-align: right;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+div.alertBox div.bottom a.button{
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	background-color: #ffffff;
+	line-height: 30px;
+	text-align: center;
+	color: #333;
+	margin-right: 20px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+div.alertBox div.bottom a.ok{
+	background-color: #09c64a;
+	color: #fff;
+}
+div.alertBox div.bottom a.cancel{
+	margin-right: 10px;
+}
+div.errorBox div.bottom a.ok{
+	background-color: #ed2f2f;
+}
+
+/*可视化数据页近期日期选择*/
+div.dateSelect div.datechoose{
+	width: 440px;
+	position: absolute;
+	top: 1px;
+	right: 350px;
+	line-height: 60px;
+}
+div.dateSelect div.datechoose button{
+	width: 60px;
+	height: 30px;
+	line-height: 27px;
+	background-color: #fff;
+	border: 1px dashed #ddd;
+	border-radius: 20px;
+	margin-left: 5px;
+	outline: none;
+}
+div.dateSelect div.datechoose button.curButton,
+div.dateSelect div.datechoose button:hover{
+	background-color: #3eb2f3;
+	color: #fff;
+	border: 1px solid #3eb2f3;
+}

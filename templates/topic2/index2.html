@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"><link rel="shortcut icon" href="../../static/topic/index/static/images/notebook_ico.ico" type="image/x-icon" />
+    <title>复盘笔记本 - 每日数据</title>
+    <meta name="keywords" content="复盘笔记本,数据可视化，股市量化分析">
+    <meta name="description" content="复盘笔记本产品slogan">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/base.css">
+    <link rel="stylesheet" href="../../static/topic/index/static/css/page.css">
+       <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
+        <script type="text/javascript">
+function disp_alert()
+{
+alert("协同分析可能需要30秒" + "\n" + "请稍等" + "\n" + '点击确定开始')
+}
+function disp_alert1()
+{
+alert("请先进行季度协同分析" + "\n" + '点击确定跳转')
+}
+</script>
+</head>
+
+<body class="oneday">
+<div class="placeHeader"></div>
+<header>
+    <div class="logo"><img src="../../static/topic/index/static/images/notebook.png"><p>复盘笔记本</p><div class="clear"></div></div>
+<ul class="menu">
+    <li ><a href="/topic">建仓or清仓?(大盘异动)</a></li>
+    <li><a href="/topic1">换仓?(短期情绪)</a></li>
+    <li class="curMenu"><a href="/topic2">辅助工具</a></li>
+  <li><a href="/topic/instruction1">使用说明</a></li>
+    </ul>
+<ul class="account">
+    <li><a href="/topic2/user">我的账户</a></li>
+ <li><a href="/">退出</a></li>
+</ul>
+<style>
+    .mb2{
+	text-align:center;
+}
+    .submit {
+	padding: 6px;
+	width:100px;
+}
+    .time{
+    float:right;
+    padding-right:20px;
+    }
+
+</style></header>
+<section class="contain">
+    <aside>
+        <ul>
+            <li class="menu1 curMenu"><a href="/topic2">季报协同分析</a></li>
+            <li class="menu2" ><a href="/topic2/analyze">个人协同分析</a></li>
+            <li class="menu3"><a href="/topic2/supervision">季报协同监控</a></li>
+            <li class="menu4"><a href="/topic2/ranklist">龙虎榜自动关联</a></li>
+        </ul>
+    </aside>
+    <section class="main" id="main">
+        <div class="dateSelect">
+            <span>协同分析</span>
+        </div>
+        <section class="content tab">
+            <form class="form-horizontal" method="post" action="{{ url_for('.front_running') }}">
+                <li class="td9">
+                    <span>股票代码:</span><input name="stock" class="text1" type="text" value="000932">
+                </li>
+                <br>
+                <li class="td9">
+                <span>选择年份:</span><select class="combobox" name="year">
+            <option value="2017">2017</option>
+  <option  value="2018">2018</option>
+  <option value="2016">2016</option>
+  <option value="2015">2015</option>
+   <option value="2014">2014</option>
+  <option value="2013">2013</option>
+  <option value="2012">2012</option>
+  <option value="2011">2011</option>
+<option value="2010">2010</option>
+  <option value="2009">2009</option>
+  <option value="2008">2008</option>
+  <option value="2007">2007</option>
+   <option value="2006">2006</option>
+  <option value="2005">2005</option>
+                </select>
+                </li>
+                                <br>
+                <li class="td9">
+                <span>选择季度:</span><select class="combobox" name="quarter">
+  <option value="{}.06.30-{}.09.30">第三季度</option>
+  <option value="{}.12.31-{}.03.31">第一季度</option>
+  <option value="{}.03.31-{}.06.30">第二季度</option>
+
+  <option value="{}.09.30-{}.12.31">第四季度</option>
+                </select>
+                </li>
+</select>
+                <br>
+                <br>
+                <div class="mb2">
+                    <input type="submit" class="act-but submit" onclick="disp_alert()" value="协同分析" id="btn_register">
+                </div>
+
+            </form>
+        </section>
+    </section>
+
+</section>
+<footer>    <div class="contain">        <p class="title">            <span class="item">关于我们</span>            <a href="/topic/instruction1">使用教程</a>            <span class="item">联系我们</span>            <a href="">联系方式</a>            <a href="">意见反馈</a>        </p>        <p class="copyright">Copyright ©2018  All Rights Reserved. 浙ICP备16009637号-3.</p>    </div></footer>
