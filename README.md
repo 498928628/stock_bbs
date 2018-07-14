@@ -32,15 +32,15 @@
 - ***PYMONGO***:使用库操作mongo,能根据需要写拓展的orm.
 
 ### 2.3网站相关技术
-- ***Flask***完成了网站的开发,对开发中的库较为熟悉.
+- ***Flask*** 完成了网站的开发,对开发中的库较为熟悉.
 - ***Python*** 用python语言完成了'复盘笔记本'网站的开发.
 - ***摘要算法***:md5,sha256等对用户密码进行加密,防泄漏.
 - ***Web安全***:了解网站常见的***sql注入***,***csrf攻击*** ,***XSS***等漏洞并作出防护.
 - ***数据处理***: 数据的清洗,统计,SequenceMatcher文本相似度分析,了解简单的pandas,numpy库的使用. 
 
 ### 2.4服务器
-- 掌握常见的***Linux*** shell命令.
-- ***Gunicorn,Supervisor,Nginx,Virtualenv***的参数配置,运行.
+- 掌握常见的 ***Linux*** shell命令.
+- ***Gunicorn,Supervisor,Nginx,Virtualenv*** 的参数配置,运行.
 
 ### 2.5爬虫
 - 仿写豆瓣电影的爬虫,了解request,pyquery等库.
@@ -48,7 +48,7 @@
 
 
 ### 2.6开发工具
-- ***Vim***在Linux环境下的使用.
+- ***Vim*** 在Linux环境下的使用.
 - ***Pycharm*** 做为主要开发的工具.
 - ***Git***:了解git的一般使用.
 
